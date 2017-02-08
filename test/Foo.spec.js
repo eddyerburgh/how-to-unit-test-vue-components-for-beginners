@@ -2,7 +2,7 @@ import { expect } from 'chai';
 import { mount } from 'avoriaz';
 import Foo from '../app/components/Foo.vue';
 
-describe('first test', () => {
+describe('Foo.vue', () => {
    it('has a root element with class foo', () => {
      const wrapper = mount(Foo);
      expect(wrapper.is('.foo')).to.equal(true);
