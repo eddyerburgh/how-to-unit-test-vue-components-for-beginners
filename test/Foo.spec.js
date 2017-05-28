@@ -18,7 +18,7 @@ describe('Foo.vue', () => {
   it('changes h1 text when #change-text is clicked', () => {
     const wrapper = mount(Foo);
     const changeMessage = wrapper.find('#change-message')[0];
-    changeMessage.simulate('click');
+    changeMessage.dispatch('click');
     const h1 = wrapper.find('h1')[0];
 
     expect(h1.text()).to.equal('new message');
