@@ -1,6 +1,6 @@
 import { expect } from 'chai'
 import { mount } from '@vue/test-utils'
-import Foo from '../app/components/Foo.vue'
+import Foo from './Foo.vue'
 
 describe('Foo.vue', () => {
   it('has a root element with class foo', () => {
@@ -8,9 +8,11 @@ describe('Foo.vue', () => {
     expect(wrapper.is('.foo')).to.equal(true)
   })
 
-  it('has a root element with class foo', () => {
+  it('sets the prop value', () => {
     const passedProp = 'some text'
-    const wrapper = mount(Foo, { propsData: { passedProp }})
+    const wrapper = mount(Foo, {
+      propsData: { passedProp }
+    })
     const p = wrapper.find('p')
     expect(p.text()).to.equal(passedProp)
   })
